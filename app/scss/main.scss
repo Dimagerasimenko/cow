@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'SF UI Display Medium';
+  src: url('../fonts/sf_ui_display_medium.eot'); /* IE 9 Compatibility Mode */
+  src: url('../fonts/sf_ui_display_medium.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+  url('../fonts/sf_ui_display_medium.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/sf_ui_display_medium.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+  url('../fonts/sf_ui_display_medium.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/sf_ui_display_medium.svg#sf_ui_display_medium') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+$marginLForHeaderBig: 325px;
+$marginTForHeaderBig: 28px;
+$marginLFor1920: 16.927%;
+$mainFontSize: 18px;
+$mainLineHeight: 25px;
+
+$fontsizeForh2Less1920: 40px;
+$lineHeightForh2Less1920: 48px;
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: #fff;
+  font-family: "SF UI Display Medium";
+  font-size: $mainFontSize;
+  line-height: $mainLineHeight;
+  color: #616161;
+}
+
+
+.underline {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 99%;
+    border-bottom: 0.7rem solid #fb973b;
+    left: 1px;
+    bottom: 19%;
+    z-index: -1;
+  }
+}
+
+@media (max-width: 1920px) {
+  .underline {
+    &:after {
+      border-bottom: 7px solid #fb973b;
+      bottom: 20%;
+    }
+  }
+}
+
+
+@import "footer";
+@import "contentSection";
+@import "header";

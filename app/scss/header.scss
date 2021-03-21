@@ -1,0 +1,176 @@
+.header-page {
+  margin-left: $marginLForHeaderBig;
+  margin-top: $marginTForHeaderBig;
+
+  .container {
+    max-width: 1531px;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+}
+
+.header-page__logo {
+  position: relative;
+
+  .img4 {
+    position: absolute;
+    right: -15%;
+    top: -15%;
+  }
+}
+
+.header-page__logo,
+.header-page__nav {
+  margin-right: 117px - 36px;
+}
+
+.header-page__nav {
+  display: flex;
+  flex-grow: 1;
+  max-width: 884px;
+  align-items: center;
+
+  .nav__link {
+    text-decoration: none;
+    color: inherit;
+    white-space: nowrap;
+    max-width: 165px;
+  }
+
+  .nav__link {
+    margin: 0 36px;
+  }
+}
+
+.nav__phone {
+  font-weight: 900;
+}
+
+.btn {
+  display: none;
+}
+
+.trigger {
+  display: none;
+}
+
+
+@media (max-width: 1920px) {
+  .header-page {
+    font-size: 0.9em;
+    line-height: 0.9em;
+    margin-left: $marginLFor1920;
+
+    .container {
+      margin-right: 10%;
+    }
+  }
+
+  .header-page__nav {
+    justify-content: space-between;
+
+    .nav__link {
+      margin: 0;
+    }
+  }
+
+  .header-page__logo,
+  .header-page__nav {
+    margin-right: 7%;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .header-page {
+    margin-left: 5%;
+  }
+  .header-page__nav {
+    margin: 0;
+    z-index: 45;
+    font-size: 25px;
+    background: rgba(191, 191, 191, 0.7);
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    visibility: hidden;
+    padding-top: 30px;
+    width: 220px;
+    top: 20px;
+    right: 35%;
+
+
+    .nav__link {
+      text-align: center;
+      padding: 15px 10px 15px 0;
+
+      &:hover {
+        background-color: white;
+        border-bottom: 1px solid black;
+      }
+    }
+  }
+  .header-page {
+
+  }
+  .container {
+    justify-content: space-between;
+    position: relative;
+    margin: 0;
+  }
+
+  .header-page {
+    .header-page__logo {
+      margin: 0;
+    }
+  }
+
+  .btn {
+    position: absolute;
+    top: 15px;
+    right: 3px;
+    width: 30px;
+    display: block;
+    text-align: right;
+
+    &:after {
+      content: '';
+      position: absolute;
+      border: 1px solid black;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      transform: rotate(45deg);
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      border: 1px solid black;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      transform: rotate(-45deg);
+    }
+  }
+
+  .trigger {
+    position: relative;
+    width: 32px;
+
+  }
+
+  .show {
+    display: block;
+  }
+
+  .hide {
+    display: none;
+  }
+
+}
+
